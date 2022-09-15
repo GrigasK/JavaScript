@@ -1,0 +1,16 @@
+#wrapper{
+ display: grid;
+ grid-template-columns: repeat(3, 200px);
+width: 60%;
+margin: 0 auto 0 auto;
+}
+
+
+/* #wrapper{
+   
+} */
+
+img{
+    width: 100px; 
+    height: 100px;
+}

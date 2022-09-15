@@ -1,0 +1,26 @@
+.wrapper{
+    display: flex;
+   
+}
+
+.container1{
+    margin: 30px;
+
+width: 200px;
+height: 200px;
+background-color:black;
+}
+.container2{
+    margin: 30px;
+
+width: 200px;
+height: 200px;
+background-color:black;
+}
+.container3{
+    margin: 30px;
+
+width: 200px;
+height: 200px;
+background-color:black;
+}

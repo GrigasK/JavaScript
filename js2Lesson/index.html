@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let action = "";
+      let number1String = "";
+      let number2String = "";
+      let isFirstNumber = true;
+      let operator = "";
+      function enter(value) {
+        action += value;
+        document.querySelector("#result").innerHTML = action;
+        if (typeof value == "string") {
+          if (value == "=") {
+            if (operator == "+") {
+              document.querySelector("#result").innerHTML =
+                Number(number1String) + Number(number2String);
+            } else {
+              document.querySelector("#result").innerHTML =
+                Number(number1String) - Number(number2String);
+            }
+          } else {
+            operator = value;
+            isFirstNumber = false;
+          }
+        } else {
+          if (isFirstNumber) {
+            number1String += value;
+          } else {
+            number2String += value;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="calculator">
+      <div>
+        Result:
+        <span id="result"></span>
+      </div>
+      <div class="pad">
+        <button onclick="enter(1)">1</button>
+        <button onclick="enter(2)">2</button>
+        <button onclick="enter(3)">3</button>
+        <br />
+        <button onclick="enter(4)">4</button>
+        <button onclick="enter(5)">5</button>
+        <button onclick="enter(6)">6</button>
+        <br />
+        <button onclick="enter(7)">7</button>
+        <button onclick="enter(8)">8</button>
+        <button onclick="enter(9)">9</button>
+        <br />
+        <button onclick="enter(10)">0</button>
+        <button onclick="enter('+')">+</button>
+        <button onclick="enter('-')">-</button>
+        <button onclick="enter('=')">=</button>
+      </div>
+    </div>
+  </body>
+</html>
