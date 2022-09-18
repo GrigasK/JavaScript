@@ -34,7 +34,7 @@ class Cars {
 
       document.getElementById("wrapper").append(divContainer);
 
-      // ši vieta neveikė, nes naudojau document.getElementById ir priskirdavo prie vieno divo viską
+      // document.getElementById nesuveikia
       divContainer.append(image, description);
     };
   }
