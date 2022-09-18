@@ -10,3 +10,5 @@ function sortArray() {
 }
 
 sortArray(array);
+
+// test
