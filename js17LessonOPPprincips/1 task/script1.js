@@ -3,12 +3,12 @@ document.querySelector("form").addEventListener("submit", getData);
 function getData(event) {
   event.preventDefault();
   const fullname = document.querySelector("input").value;
+
   const name = fullname.split(" ")[0];
   const editedName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
   const surname = fullname.split(" ")[1];
   const editedSurname =
     surname.charAt(0).toUpperCase() + surname.slice(1).toLowerCase();
-
   const person = new People(editedName, editedSurname);
   person.fillTable();
 }
