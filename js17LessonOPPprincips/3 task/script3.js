@@ -11,3 +11,5 @@ function sortArray() {
 }
 
 sortArray(array);
+
+console.log(newArray);
