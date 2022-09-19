@@ -19,23 +19,23 @@ class Cars {
     this.mileage = mileage;
     this.price = price;
     this.url = url;
-    this.addData = function () {
-      const divContainer = document.createElement("div");
-      divContainer.setAttribute("id", "divContainer");
-      divContainer.addEventListener("click", () => {
-        alert(price);
-      });
+  }
+  addData() {
+    const divContainer = document.createElement("div");
+    divContainer.setAttribute("id", "divContainer");
+    divContainer.addEventListener("click", () => {
+      alert(price);
+    });
 
-      const description = document.createElement("h6");
-      description.textContent = brand + " " + model;
+    const description = document.createElement("h6");
+    description.textContent = brand + " " + model;
 
-      const image = document.createElement("img");
-      image.src = url;
+    const image = document.createElement("img");
+    image.src = url;
 
-      document.getElementById("wrapper").append(divContainer);
+    document.getElementById("wrapper").append(divContainer);
 
-      // document.getElementById nesuveikia
-      divContainer.append(image, description);
-    };
+    // document.getElementById nesuveikia
+    divContainer.append(image, description);
   }
 }
