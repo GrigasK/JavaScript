@@ -20,11 +20,6 @@ async function getPropertyData(url) {
   //     .catch((error) => console.log(error));
 }
 
-document.querySelector("button").addEventListener("click", () => {
-  const cities = document.querySelector("button").value;
-  console.log(cities);
-});
-
 async function getPropertyDataFromURL(url) {
   const data = await getPropertyData(url);
   drawProperties(data);
